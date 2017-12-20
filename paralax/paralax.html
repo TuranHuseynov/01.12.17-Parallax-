@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paralax</title>
+</head>
+
+<body>
+	<style type="text/css">
+		body{
+			margin:0;
+			padding: 0;
+		}
+
+		.one{
+			width: 100%;
+			height: 100vh;
+
+			background: url(images/bcg_slide-1.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.two{
+			width: 100%;
+			height: 100vh;
+			background: url(images/bcg_slide-2.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.three{
+			width: 100%;
+			height: 100vh;
+			background: url(images/bcg_slide-3.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.four{
+			width: 100%;
+			height: 100vh;
+			background: url(images/bcg_slide-4.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+	</style>
+
+
+
+
+
+
+
+
+
+
+
+<section class="one"></section>
+<section class="two"></section>
+<section class="three"></section>
+<section class="four"></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	
+
+window.onscroll = function(event){
+	var a = -document.documentElement.scrollTop/7;
+	console.log(document.documentElement.scrollTop);
+	document.querySelector(".one").style.backgroundPosition = 'center '+a+"px";
+	document.querySelector(".two").style.backgroundPosition = 'center '+a+"px";
+	document.querySelector(".three").style.backgroundPosition = 'center '+a+"px";
+	if(document.documentElement.scrollTop >700){
+		for(i=0;i<paralax.length;i++){
+			paralax[1].querySelector(".secondText").style.opacity = -1;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
